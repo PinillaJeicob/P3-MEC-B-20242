@@ -28,42 +28,39 @@
 ~notas=0
 }
 ##¿Cuál de las siguientes es la sintaxis correcta para imprimir un mensaje en consola en Java?
+~ Console.WriteLine("Hola, Mundo!");
+=System.out.print("Hola, Mundo!");
+~print("Hola, Mundo!");
+~printf("Hola, Mundo!");
 
-a) Console.WriteLine("Hola, Mundo!");
-b) System.out.print("Hola, Mundo!");
-c) print("Hola, Mundo!");
-d) printf("Hola, Mundo!");
-Respuesta correcta: b) System.out.print("Hola, Mundo!");
+##¿Qué palabra clave se usa para definir una clase en Java?
 
-¿Qué palabra clave se usa para definir una clase en Java?
+~struct
+~object
+=class
+~def
 
-a) struct
-b) object
-c) class
-d) def
-Respuesta correcta: c) class
 
-¿Cuál es el tamaño predeterminado de un entero (int) en Java?
+##¿Cuál es el tamaño predeterminado de un entero (int) en Java?
 
-a) 16 bits
-b) 32 bits
-c) 64 bits
-d) 8 bits
-Respuesta correcta: b) 32 bits
+~ 16 bits
+=32 bits
+~64 bits
+~ 8 bits
 
-¿Qué operador se utiliza para la concatenación de cadenas (strings) en Java?
+##¿Qué operador se utiliza para la concatenación de cadenas (strings) en Java?
 
-a) +
-b) *
-c) &
-d) -
-Respuesta correcta: a) +
+= +
+~ *
+~ &
+~ -
 
-¿Cuál de las siguientes opciones es un tipo de dato primitivo en Java?
 
-a) String
-b) Integer
-c) Boolean
-d) float
-Respuesta correcta: d) float
+##¿Cuál de las siguientes opciones es un tipo de dato primitivo en Java?
+
+~ String
+~ Integer
+~ Boolean
+= float
+
 
