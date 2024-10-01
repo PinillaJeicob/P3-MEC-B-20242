@@ -14,7 +14,7 @@ public class EPS extends javax.swing.JFrame {
         private Queue<String> colaResultados;  // Cola para almacenar resultados
         private DefaultListModel<String> modeloEnProceso; // Modelo para mostrar resultados en proceso
         private JList<String> listaEnProceso; // JList para mostrar los elementos en proceso
-
+        private JSlider sliderVelocidad; // Slider para ajustar la velocidad del cronómetro
     // Constructor
     public EPS() {
         initComponents();
@@ -43,7 +43,17 @@ public class EPS extends javax.swing.JFrame {
         JTextArea areaResultado = new JTextArea(25, 40);
         areaResultado.setEditable(false);
         labelTiempo = new JLabel("Hora Actual: 00:00:00");  // Etiqueta para mostrar el cronómetro
-        // Configurar el layout
+        // Slider para ajustar la velocidad
+        sliderVelocidad = new JSlider(1, 10); // Rango de 1 a 10 segundos
+        sliderVelocidad.setMajorTickSpacing(1);
+        sliderVelocidad.setPaintTicks(true);
+        sliderVelocidad.setPaintLabels(true);
+        sliderVelocidad.setValue(5); // Valor predeterminado (5 segundos)
+        
+        JLabel labelSlider = new JLabel("Velocidad de Procesamiento (segundos):");
+
+
+// Configurar el layout
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Simulación Atención EPS");
 
@@ -60,6 +70,7 @@ public class EPS extends javax.swing.JFrame {
                     .addComponent(labelServicio)
                     .addComponent(btnProcesar)
                     .addComponent(btnIniciarProceso)
+                    .addComponent(labelSlider) // Etiqueta del slider
                     .addComponent(labelTiempo) 
                 )
                 .addGroup(layout.createParallelGroup(GroupLayout.Alignment.LEADING)
@@ -67,6 +78,7 @@ public class EPS extends javax.swing.JFrame {
                     .addComponent(comboCategoria)
                     .addComponent(comboServicio)
                     .addComponent(areaResultado)
+                        .addComponent(sliderVelocidad) // Añadimos el slider
                     .addComponent(new JScrollPane(listaEnProceso)) 
                 )
         );
